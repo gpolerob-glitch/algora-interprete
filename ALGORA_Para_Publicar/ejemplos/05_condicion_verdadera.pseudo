@@ -1,0 +1,9 @@
+Algoritmo MayorDeEdad
+    Definir edad Como Entero;
+    edad = 20;
+    Si edad >= 18 Entonces
+        Escribir("Es mayor de edad");
+    SiNo
+        Escribir("Es menor de edad");
+    FinSi
+FinAlgoritmo

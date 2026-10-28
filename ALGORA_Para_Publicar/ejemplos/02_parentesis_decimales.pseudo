@@ -1,0 +1,7 @@
+Algoritmo ParentesisYDecimales
+    Definir precio Como Decimal;
+    Definir total Como Decimal;
+    precio = 12.5;
+    total = (precio + 2.5) / 3;
+    Escribir("Total: ", total);
+FinAlgoritmo

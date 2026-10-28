@@ -1,0 +1,4 @@
+Algoritmo VariableNoDeclarada
+    total = 5;
+    Escribir(total);
+FinAlgoritmo

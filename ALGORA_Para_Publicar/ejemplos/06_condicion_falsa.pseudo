@@ -1,0 +1,9 @@
+Algoritmo CondicionFalsa
+    Definir nota Como Decimal;
+    nota = 49.5;
+    Si nota >= 61 Entonces
+        Escribir("Aprobado");
+    SiNo
+        Escribir("Reprobado");
+    FinSi
+FinAlgoritmo

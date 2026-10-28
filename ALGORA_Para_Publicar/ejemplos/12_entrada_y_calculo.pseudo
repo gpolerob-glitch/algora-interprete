@@ -1,0 +1,7 @@
+Algoritmo DobleDeNumero
+    Definir numero Como Decimal;
+    Definir doble Como Decimal;
+    Leer(numero);
+    doble = numero * 2;
+    Escribir("El doble es ", doble);
+FinAlgoritmo

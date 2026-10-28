@@ -1,0 +1,14 @@
+Algoritmo CondicionalAnidado
+    // Ejemplo de condiciones anidadas
+    Definir x Como Entero;
+    x = -3;
+    Si x < 0 Entonces
+        Escribir("Negativo");
+    SiNo
+        Si x == 0 Entonces
+            Escribir("Cero");
+        SiNo
+            Escribir("Positivo");
+        FinSi
+    FinSi
+FinAlgoritmo

@@ -1,0 +1,5 @@
+Algoritmo CaracterInvalido
+    Definir valor Como Entero;
+    valor = 4 @ 2;
+    Escribir(valor);
+FinAlgoritmo

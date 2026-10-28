@@ -1,0 +1,14 @@
+ALGORA - Registro de pruebas - 28/10/2026
+
+Prueba 01 | Asignación y precedencia aritmética | APROBADA | Resultado: 18
+Prueba 02 | Paréntesis y números decimales | APROBADA | Total: 5
+Prueba 03 | Entrada de número entero | APROBADA | Edad ingresada: 21
+Prueba 04 | Entrada y salida de texto | APROBADA | Hola, Ana!
+Prueba 05 | Condición verdadera | APROBADA | Es mayor de edad
+Prueba 06 | Condición falsa | APROBADA | Reprobado
+Prueba 07 | Detección de símbolo inválido | APROBADA | Error lexico en linea 3, columna 15: Caracter no permitido: '@'.
+Prueba 08 | Falta de punto y coma | APROBADA | Error sintactico en linea 4, columna 5: Falta ; al finalizar la asignacion (se encontro 'Escribir').
+Prueba 09 | Control de división entre cero | APROBADA | Error de ejecucion en linea 3, columna 19: Division entre cero. Revise el denominador.
+Prueba 10 | Control de variable no declarada | APROBADA | Error de ejecucion en linea 2, columna 5: La variable 'total' no esta declarada. Declarela con Definir.
+
+Resultado: 10/10 pruebas obligatorias aprobadas.

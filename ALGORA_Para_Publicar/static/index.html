@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algora · Intérprete educativo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-icon">A<span>_</span></div><div><strong>ALGORA</strong><small>Laboratorio de pseudocódigo</small></div></div>
+      <div class="sidebar-label">ESPACIO DE TRABAJO</div>
+      <nav class="nav"><button class="nav-item active" data-vista="laboratorio"><span>⌘</span> Editor y ejecución</button><button class="nav-item" data-vista="lenguaje"><span>{ }</span> Reglas del lenguaje</button></nav>
+      <div class="sidebar-label second">EJEMPLOS DISPONIBLES</div>
+      <div class="sidebar-examples" id="lista-ejemplos"></div>
+      <div class="sidebar-footer"><div class="footer-dot"></div><span>Motor Python · ejecución segura</span></div>
+    </aside>
+    <main class="content">
+      <header class="topbar"><span>Autómatas y Lenguajes Formales</span><div class="top-right"><span class="version">VERSIÓN EDUCATIVA 1.0</span><span class="avatar">GP</span></div></header>
+      <section id="vista-laboratorio" class="vista">
+        <div class="page-heading"><div><div class="eyebrow">TU ESPACIO PARA APRENDER</div><h1>Interprete de <em>pseudocódigo.</em></h1><p>Escribe, analiza y ejecuta algoritmos. Descubre qué sucede en cada etapa.</p></div><span class="badge-ready"><span class="green-dot"></span> Sistema preparado</span></div>
+        <div class="workspace">
+          <div class="panel code-panel">
+            <div class="panel-head"><div class="panel-title"><span class="head-icon">&lt;/&gt;</span><strong>Editor de código</strong><small id="line-count">0 líneas</small></div><div class="editor-actions"><button class="action-secondary" id="btn-limpiar">Limpiar</button><button class="action-secondary" id="btn-analizar">Analizar</button><button class="action-primary" id="btn-ejecutar"><span>▶</span> Ejecutar programa</button></div></div>
+            <div class="editor-area"><div id="line-numbers" class="line-numbers" aria-hidden="true">1</div><textarea id="editor" spellcheck="false" aria-label="Editor de pseudocódigo" placeholder="Algoritmo MiPrimerPrograma ..."></textarea></div>
+            <div class="editor-footer"><span><span class="tiny-dot"></span> Sintaxis Algora</span><span>UTF-8 <span class="divide">/</span> Español</span></div>
+          </div>
+          <div class="lower-grid">
+            <div class="panel terminal-panel">
+              <div class="panel-head"><div class="panel-title"><span class="head-icon console-icon">&gt;_</span><strong>Consola de resultados</strong></div><button class="action-secondary small" id="btn-borrar-salida">Borrar</button></div>
+              <div id="terminal" class="terminal" aria-live="polite"><div class="console-muted">&gt; La salida de tu programa aparecerá aquí.</div></div>
+              <form id="form-entrada" class="input-form" hidden><label id="etiqueta-entrada" for="valor-entrada">Dato requerido</label><div class="input-row"><input type="text" id="valor-entrada" autocomplete="off" placeholder="Escribe un valor…"><button type="submit">Enviar ↵</button></div></form>
+            </div>
+            <div class="panel tokens-panel">
+              <div class="panel-head"><div class="panel-title"><span class="head-icon token-icon">≡</span><strong>Análisis léxico</strong><small id="token-count">0 tokens</small></div></div>
+              <div class="token-table-wrap"><table class="token-table"><thead><tr><th>Lexema</th><th>Tipo</th><th>Línea</th></tr></thead><tbody id="tokens"><tr><td colspan="3" class="token-empty">Ejecuta el análisis para ver los tokens.</td></tr></tbody></table></div>
+            </div>
+          </div>
+        </div>
+        <div class="help-strip"><div class="help-icon">i</div><p><strong>¿Primera vez aquí?</strong> Selecciona un ejemplo a la izquierda. Para ver los tokens sin ejecutar, presiona <b>Analizar</b>.</p></div>
+      </section>
+      <section id="vista-lenguaje" class="vista" hidden>
+        <div class="page-heading"><div><div class="eyebrow">DOCUMENTACIÓN DEL LENGUAJE</div><h1>Reglas de <em>Algora.</em></h1><p>Una sintaxis pequeña, consistente y pensada para quienes comienzan a programar.</p></div></div>
+        <div class="rules-grid">
+          <article class="rule"><span class="rule-num">01 / ESTRUCTURA</span><h2>Inicio y fin</h2><pre>Algoritmo MiPrograma
+    Escribir("Hola mundo");
+FinAlgoritmo</pre><p>Todo programa comienza con <code>Algoritmo nombre</code> y termina con <code>FinAlgoritmo</code>.</p></article>
+          <article class="rule"><span class="rule-num">02 / VARIABLES</span><h2>Declarar y asignar</h2><pre>Definir edad Como Entero;
+Definir precio Como Decimal;
+Definir nombre Como Texto;
+edad = 18;</pre><p>Los tipos son Entero, Decimal y Texto. Toda variable debe declararse antes de usarse.</p></article>
+          <article class="rule"><span class="rule-num">03 / ENTRADA Y SALIDA</span><h2>Leer y escribir</h2><pre>Leer(edad);
+Escribir("Edad: ", edad);</pre><p>Leer solicita datos desde la consola; Escribir admite una o varias expresiones.</p></article>
+          <article class="rule"><span class="rule-num">04 / CONDICIONALES</span><h2>Si / SiNo</h2><pre>Si edad >= 18 Entonces
+    Escribir("Mayor");
+SiNo
+    Escribir("Menor");
+FinSi</pre><p>Comparadores: ==, !=, &gt;, &lt;, &gt;= y &lt;=. SiNo es opcional. Admite anidamiento.</p></article>
+          <article class="rule"><span class="rule-num">05 / EXPRESIONES</span><h2>Aritmética</h2><pre>total = (12 + 8) * 2 / 5;
+negativo = -3;</pre><p>Multiplicación y división tienen prioridad sobre suma y resta. Se respetan los paréntesis.</p></article>
+          <article class="rule"><span class="rule-num">06 / CONVENCIONES</span><h2>Reglas generales</h2><pre>// Comentarios de una línea
+Escribir("Texto entre comillas");</pre><p>Usa punto y coma al final de instrucciones simples. Los identificadores distinguen mayúsculas; las palabras reservadas no.</p></article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Algoritmo AritmeticaBasica
+    Definir a Como Entero;
+    Definir b Como Entero;
+    Definir resultado Como Entero;
+    a = 10;
+    b = 4;
+    resultado = a + b * 2;
+    Escribir("Resultado: ", resultado);
+FinAlgoritmo

@@ -1,0 +1,11 @@
+# ALGORA: despliegue gratuito en Render.
+# Este archivo se reconoce al usar New > Blueprint en Render.
+services:
+  - type: web
+    name: algora-interprete
+    runtime: python
+    plan: free
+    buildCommand: python -m unittest discover -s tests -v
+    startCommand: python app.py
+    healthCheckPath: /health
+    autoDeployTrigger: commit

@@ -1,0 +1,5 @@
+Algoritmo EntradaNombre
+    Definir nombre Como Texto;
+    Leer(nombre);
+    Escribir("Hola, ", nombre, "!");
+FinAlgoritmo

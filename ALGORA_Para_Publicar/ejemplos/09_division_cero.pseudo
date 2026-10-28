@@ -1,0 +1,5 @@
+Algoritmo DivisionCero
+    Definir resultado Como Decimal;
+    resultado = 5 / (3 - 3);
+    Escribir(resultado);
+FinAlgoritmo
