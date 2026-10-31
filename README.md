@@ -1,4 +1,5 @@
 # ALGORA - Intérprete educativo de pseudocódigo
+ESTAS INSTRUCCIONES SON PARA EJECUTARLO EN NUESTRA PROPIA PC, NOSOTROS USAMOS UN RENDER PARA SUBIRLO Y QUE CUALQUIER MAQUINA SIN NECESIDAD DEL CODIGO PUEDA PROBARLO, FUNCIONAL Y PRATICO.
 
 Aplicación web local desarrollada para el curso de **Autómatas y Lenguajes Formales**. Permite editar y ejecutar un lenguaje de pseudocódigo con palabras reservadas en español, mostrar tokens y localizar errores léxicos, sintácticos y de ejecución.
 
